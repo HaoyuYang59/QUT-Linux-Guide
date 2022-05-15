@@ -63,15 +63,31 @@ The Remote Data Storage System ([RDSS](https://qutvirtual4.qut.edu.au/group/rese
 2. Connect to the Remote File Server 
     a) Open the file manager.  
     b) Click "Other Locations" at the left bar (in Ubuntu 20.04) and might look different in other versions ("Connect to server", for example).  
-    c) Input "**smb://rstore.qut.edu.au/**" and then click "connect", you should now be connect to the RDSS.  
-    d) There should be three folders: Acquisitions, Projects, Archives. To know where you data locates, please read the "Where do I store my data?" part at [this page](https://qutvirtual4.qut.edu.au/group/research-students/conducting-research/managing-research-data/store-digital-research-data/research-data-storage-service).  
+    c) Input "**smb://rstore.qut.edu.au/**" and then click "connect".
+    d) You should be asked for identification, if so, use "**QUTAD\your_QUT_username**" as the username.
+    e) You would now be connected to the RDSS. There should be three folders: Acquisitions, Projects, Archives. To know where you data locates, please read the "Where do I store my data?" part at [this page](https://qutvirtual4.qut.edu.au/group/research-students/conducting-research/managing-research-data/store-digital-research-data/research-data-storage-service).  
 
 
-## Access QUT Printing Services
+## Access QUT Printing Services  
+This guide works at least on printing from the *printers outside the HDR offices* using *HDR-student account*. And I know there are different printers (for students or staffs) and details might be a little different, you might need do some experiments yourself if so.
+
+1. Identify the Server  
+    There should be a label around the printer identifying the printer as "\\FACULTY-print\FACULTY-BUILDING-INDEX" （for example, in my case "\\sef-print\SEF-M2-1"）.
+   
+ 2. (Optional) Install Driver  
+    a) I would usually recommend installing the driver. You might try without doing so and come back if anything goes sideways. 
+    b) Usually, you would be able to identify the manufacturer and model of the printer by looking carefully around the printer or the control panel (or maybe ask the admin). In my case, it's one "**ApeosPort-VI C4471**" made by "FUJIFILM". If so, go to the manufacturer's website and try to find the driver for Linux or simply Google search. In my case, I found the driver [here](https://support-fb.fujifilm.com/processDriverForm.do?ctry_code=SG&lang_code=en&d_lang=en&corp_pid=AP6C4471&rts=null&model=ApeosPort-VI+C4471&type_id=2&oslist=Linux&lang_list=en). Please **DO NOT** use this driver if the model doesn't match.
+
+3. Add the Printer 
+    a) Go to "Settings" - "Printers" - "Additional Printer Settings".
+    b) Click "+ Add" on the popup window, go to "Network Printer" - "Windows Printer via SAMBA".
+    c) Input the printer location. **NOTE: remember to use "/" in Linux instead of "\"**. For example, the printer is labelled as "\\sef-print\SEF-M2-1", so I put **"//sef-print/SEF-M2-1"**.
+    d) Input Authentication using "**QUTAD/your_QUT_username**" and then click "forward". **Note: from my experience, you would not be prompted nor allowed to print if you don't input authentication beforehand** 
+    e) Choose driver and then decribe the printer. 
 
 
 ## Access Work Computer Remotely
-
+This guide is written with
 
 
 
