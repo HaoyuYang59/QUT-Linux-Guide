@@ -1,1 +1,1 @@
-QUT Linux User Guide.md
+qut-linux-user-guide.md
