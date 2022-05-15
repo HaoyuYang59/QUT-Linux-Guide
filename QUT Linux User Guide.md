@@ -1,9 +1,7 @@
 # QUT Ubuntu User Guide
 As an MPhil student and a Linux (currently Ubuntu 20.04) user from Queensland University of Technology (QUT), I found Linux hardly officially supported here, if any. So here I share my personal experience of accessing various daily QUT resources from Linux operating systems.
 
-This guide is written and tested to work on **Ubuntu 20.04** as of May 2022 at Garden Points campus, and might be subject to future changes.
-
-This guide was tested with a **student account**, things might vary if you're using a staff account.
+This guide is written and tested to work on **Ubuntu 20.04** as of May 2022 at Garden Points campus with **HDR student account**, and might differ slightly if you're holding a different account.
 
 
 ## Table of Contents
@@ -53,9 +51,9 @@ Sometimes, you might find some of your folders under "INBOX" missing. In this ca
   
 
 ## Access QUT Remote Data Storage System (RDSS)
-The Remote Data Storage System ([RDSS](https://qutvirtual4.qut.edu.au/group/research-students/conducting-research/managing-research-data/store-digital-research-data/research-data-storage-service)) serves as a secure and fast repository to store and **backup** your research data. 
+The Remote Data Storage System ([RDSS](https://qutvirtual4.qut.edu.au/group/research-students/conducting-research/managing-research-data/store-digital-research-data/research-data-storage-service)) serves as a secure and fast repository to **backup** your research data. 
 
-1. Set up Samba Clent  
+1. Set up SAMBA Clent  
     `# Ubuntu`  
     `sudo apt-get update`  
     `sudo apt-get install samba smbclient`  
@@ -87,11 +85,17 @@ This guide works at least on printing from the *printers outside the HDR offices
 
 
 ## Access Work Computer Remotely
-This guide is written with
+Note: This guide is written using **[Remmina](https://remmina.org/)** 1.4.2 , installed by default on Ubuntu 20.04, as an example. 
 
+1. Enable Remote Desktop on Work Computer following [this guide](https://qutvirtual4.qut.edu.au/group/staff/technology-and-facilities/technology-services/internet-and-network-access/working-remotely/remotely-connect-to-your-work-computer)
 
+2. Identify the **Full Computer Name** of your Work Computer, following [this guide](https://support.microsoft.com/en-us/office/do-you-need-help-locating-your-computer-name-00384381-8aa9-4398-b81b-475f09fed618). For example, my computer name looks something like "*SEF-PAxxxxxxxx*".
 
+3. Start Remmina, click ![image](https://user-images.githubusercontent.com/80093591/168461176-47f890ce-7936-4a78-a8da-5ceeb6efbdbd.png) at the left top corner to creater a New Connection Profile, with the following details:
+    Protocol: RDP-Remote Desktop Protocol
+    Server: *your_computer_name*.qut.edu.au
+    Username: *your_QUT_username*
+    Password: *your_QUT_password*
 
-
-
- 
+4. Click "Save" to save your RDP profile, then double click to start the Remote Desktop session.
+    
