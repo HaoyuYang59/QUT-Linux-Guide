@@ -1,2 +1,0 @@
-# QUT-Linux-Guide
- 
